@@ -1,0 +1,5 @@
+D:\Work\dyplom\s21992\gameLift\gamelift_client_and_test\obj\Debug\net6.0\gamelift_client_and_test.csproj.AssemblyReference.cache
+D:\Work\dyplom\s21992\gameLift\gamelift_client_and_test\obj\Debug\net6.0\gamelift_client_and_test.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\dyplom\s21992\gameLift\gamelift_client_and_test\obj\Debug\net6.0\gamelift_client_and_test.AssemblyInfoInputs.cache
+D:\Work\dyplom\s21992\gameLift\gamelift_client_and_test\obj\Debug\net6.0\gamelift_client_and_test.AssemblyInfo.cs
+D:\Work\dyplom\s21992\gameLift\gamelift_client_and_test\obj\Debug\net6.0\gamelift_client_and_test.csproj.CoreCompileInputs.cache

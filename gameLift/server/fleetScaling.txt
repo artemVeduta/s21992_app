@@ -1,0 +1,6 @@
+aws gamelift put-scaling-policy \
+    --fleet-id "fleet-00aaaa00-a000-00a0-00a0-aa00a000aa0a" \
+    --name "s21992_gameLift_server_fleet_policy" \
+    --policy-type "TargetBased" \
+    --metric-name "PercentAvailableGameSessions" \
+    --target-configuration "TargetValue=5"

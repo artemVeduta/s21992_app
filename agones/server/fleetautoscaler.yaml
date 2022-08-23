@@ -1,0 +1,16 @@
+apiVersion: "autoscaling.agones.dev/v1"
+kind: FleetAutoscaler
+metadata:
+  name: agones-s21992-fleet-autoscaler
+spec:
+  fleetName: agones-s21992-fleet
+  policy:
+    type: Buffer
+    buffer:
+      bufferSize: 5
+      minReplicas: 1
+      maxReplicas: 20
+  sync:
+    type: FixedInterval
+    fixedInterval:
+      seconds: 30

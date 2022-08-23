@@ -1,0 +1,13 @@
+aws gamelift create-fleet
+  --name s21992_gameLift_server_fleet
+  --description "s21992_gameLift_server"
+  --ec2-instance-type c5.large
+  --region eu-central-1
+  --locations "Location=eu-central-1"
+  --fleet-type ON_DEMAND
+  --certificate-configuration "CertificateType=GENERATED"
+  --runtime-configuration "GameSessionActivationTimeoutSeconds=300, MaxConcurrentGameSessionActivations=2, ServerProcesses=[{LaunchPath=C:\game\Bin64.dedicated\MultiplayerSampleProjectLauncher_Server.exe, Parameters=+sv_port 33435 +start_lobby, ConcurrentExecutions=10}]"
+  --new-game-session-protection-policy "FullProtection"
+  --resource-creation-limit-policy "NewGameSessionsPerCreator=3, PolicyPeriodInMinutes=15"
+  --ec2-inbound-permissions "FromPort=33435,ToPort=33435,IpRange=0.0.0.0/0,Protocol=UDP" "FromPort=33235,ToPort=33235,IpRange=0.0.0.0/0,Protocol=UDP"
+  --metric-groups "EMEAfleets"

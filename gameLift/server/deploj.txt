@@ -1,0 +1,5 @@
+aws gamelift create-script \
+    --name "s21992_gameLift_server" \
+    --script-version "1.0.0" \
+    --zip-file fileb://s21992_gameLift_server_1.0.0.zip \
+    --region eu-central-1

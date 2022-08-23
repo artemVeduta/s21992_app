@@ -1,0 +1,15 @@
+apiVersion: "allocation.agones.dev/v1"
+kind: GameServerAllocation
+spec:
+  selectors:
+    - matchLabels:
+        agones.dev/fleet: green-fleet
+    - matchLabels:
+        agones.dev/fleet: blue-fleet
+    - matchLabels:
+        game: agones-s21992-game
+      gameServerState: Ready
+      players:
+        minAvailable: 0
+        maxAvailable: 10000
+  scheduling: Packed

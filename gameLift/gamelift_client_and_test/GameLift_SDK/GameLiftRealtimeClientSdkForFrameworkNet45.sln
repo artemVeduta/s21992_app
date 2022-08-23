@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4fa97a1f-9d10-4591-8471-56893ae7b73e}") = "GameLiftRealtimeClientSdkForFrameworkNet45", "GameLiftRealtimeClientSdkForFrameworkNet45\GameLiftRealtimeClientSdkForFrameworkNet45.csproj", "{4fa97a1f-9d10-4591-8471-56893ae7b73e}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4fa97a1f-9d10-4591-8471-56893ae7b73e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4fa97a1f-9d10-4591-8471-56893ae7b73e}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4fa97a1f-9d10-4591-8471-56893ae7b73e}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4fa97a1f-9d10-4591-8471-56893ae7b73e}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0c0b26ec-ec02-4079-898f-29c51ddf1fa5}
+	EndGlobalSection
+EndGlobal

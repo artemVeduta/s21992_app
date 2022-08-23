@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4fa97a1f-9d10-4591-8471-56893ae7b73e}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aws.GameLift.Realtime</RootNamespace>
+    <AssemblyName>GameLiftRealtimeClientSdkForFrameworkNet45</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.10.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\SuperSocket.ClientEngine.Core.0.10.0\lib\net45\SuperSocket.ClientEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebSocket4Net, Version=0.15.2.11, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\WebSocket4Net.0.15.2\lib\net45\WebSocket4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>$(SolutionDir)\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Source\Client.cs" />
+    <Compile Include="..\Source\ClientConfiguration.cs" />
+    <Compile Include="..\Source\ClientSession.cs" />
+    <Compile Include="..\Source\ClientLogger.cs" />
+    <Compile Include="..\Source\Commands\UDPClientAckMessage.cs">
+      <Link>Commands\UDPClientAckMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\UDPConnectMessage.cs">
+      <Link>Commands\UDPConnectMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Connection.cs" />
+    <Compile Include="..\Source\ConnectionToken.cs" />
+    <Compile Include="..\Source\Constants.cs">
+    </Compile>
+    <Compile Include="..\Source\Event\BaseEventArgs.cs">
+      <Link>Event\BaseEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Event\DataReceivedEventArgs.cs">
+      <Link>Event\DataReceivedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Event\GameEndEventArgs.cs">
+      <Link>Event\GameEndEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Event\GameStartEventArgs.cs">
+      <Link>Event\GameStartEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Event\GroupMembershipEventArgs.cs">
+      <Link>Event\GroupMembershipEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Event\JoinGroupEventArgs.cs">
+      <Link>Event\JoinGroupEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Event\LeaveGroupEventArgs.cs">
+      <Link>Event\LeaveGroupEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Event\RequestGroupMembershipEventArgs.cs">
+      <Link>Event\RequestGroupMembershipEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Google\CoreCommands.cs">
+      <Link>Google\CoreCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Google\GroupMessages.cs">
+      <Link>Google\GroupMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Google\Packet.cs">
+      <Link>Google\Packet.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\BaseConnection.cs">
+      <Link>Network\BaseConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\ConnectionFactory.cs">
+      <Link>Network\ConnectionFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\ConnectionFactoryOptions.cs">
+      <Link>Network\ConnectionFactoryOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\ConnectionStats.cs">
+      <Link>Network\ConnectionStats.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\DotNetUdpConnection.cs">
+      <Link>Network\DotNetUdpConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\DtlsUdpConnection.cs">
+      <Link>Network\DtlsUdpConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\FastConnectionFactory.cs">
+      <Link>Network\FastConnectionFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\GeneratedForFramework\DTLSConnection.cs">
+      <Link>Network\GeneratedForFramework\DTLSConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\GeneratedForFramework\GameLiftRealtimeNative.cs">
+      <Link>Network\GeneratedForFramework\GameLiftRealtimeNative.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\GeneratedForFramework\GameLiftRealtimeNativePINVOKE.cs">
+      <Link>Network\GeneratedForFramework\GameLiftRealtimeNativePINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\GeneratedForFramework\NativeByteArray.cs">
+      <Link>Network\GeneratedForFramework\NativeByteArray.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\GeneratedForFramework\SendEncryptedCallback.cs">
+      <Link>Network\GeneratedForFramework\SendEncryptedCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\GeneratedForFramework\SWIGTYPE_p_unsigned_char.cs">
+      <Link>Network\GeneratedForFramework\SWIGTYPE_p_unsigned_char.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\MbedDtlsClient.cs">
+      <Link>Network\MbedDtlsClient.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\NativeHelper.cs">
+      <Link>Network\NativeHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\NetworkEvents.cs">
+      <Link>Network\NetworkEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\ReliableConnectionFactory.cs">
+      <Link>Network\ReliableConnectionFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\UdpConnection.cs">
+      <Link>Network\UdpConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\WebSocket4NetWsConnection.cs">
+      <Link>Network\WebSocket4NetWsConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Network\WebSocketConnection.cs">
+      <Link>Network\WebSocketConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Types\ConnectionStatus.cs">
+      <Link>Types\ConnectionStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Types\ConnectionTypes.cs">
+      <Link>Types\ConnectionTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\ClientEvents.cs">
+      <Link>Event\ClientEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Event\ErrorEventArgs.cs">
+      <Link>Event\ErrorEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\ClientEvent.cs">
+      <Link>Commands\ClientEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\LoginCommand.cs">
+      <Link>Commands\LoginCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\LoginResult.cs">
+      <Link>Commands\LoginResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\VerifyIdentityCommand.cs">
+      <Link>Commands\VerifyIdentityCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\VerifyIdentityResult.cs">
+      <Link>Commands\VerifyIdentityResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\JoinGroup.cs">
+      <Link>Commands\JoinGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\LeaveGroup.cs">
+      <Link>Commands\LeaveGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\RequestGroupMembership.cs">
+      <Link>Commands\RequestGroupMembership.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\GroupMembershipUpdate.cs">
+      <Link>Commands\GroupMembershipUpdate.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Commands\RTMessage.cs">
+      <Link>Commands\RTMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Types\DeliveryIntent.cs">
+      <Link>Types\DeliveryIntent.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
